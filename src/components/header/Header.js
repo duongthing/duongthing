@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./header.css"
 const Header = () => {
+
+    const [toggleMenu, setToggleMenu] = useState(false);
+    const handleToggleMenu = () => {
+        setToggleMenu(!toggleMenu)
+    }
     return (
         <header className='header'>
             <nav className='nav container'>
-                <a href='index.html' className='nav_logo'>Duong</a>
+                <a href='index.html' className='nav_logo'>Duongthing</a>
 
-                <div className='nav_menu'>
+                <div className={toggleMenu ? "nav_menu show_menu" : "nav_menu"}>
                     <ul className='nav_list grid'>
                         <li className='nav_item'>
-                            <a href='#home' className='nav_link'>
+                            <a href='#home' className='nav_link active_link'>
                                 <i className='uil uil-estate nav_icon'></i> Home
                             </a>
                         </li>
@@ -40,7 +45,10 @@ const Header = () => {
                         </li>
                     </ul>
 
-                    
+                    <i class="uil uil-times nav_close" onClick={handleToggleMenu}></i>
+                </div>
+                <div className='nav_toggle' onClick={handleToggleMenu}>
+                    <i class="uil uil-apps"></i>
                 </div>
             </nav>
         </header>
