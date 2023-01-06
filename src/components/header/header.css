@@ -42,7 +42,7 @@
 }
 /* active link */
 
-.active_link,
+.active-link,
 .nav_link:hover{
     color: var(--title-color-dark);
 }
