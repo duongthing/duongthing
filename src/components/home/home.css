@@ -52,7 +52,7 @@
     margin-bottom: var(--mb-3);
 }
 .home_img{
-    background: url("../../assets/avatar.png");
+    background: url("../../assets/ava.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -133,9 +133,13 @@
 }
 /* medium device */
 @media screen and (max-width:768px) {
+  .home_container{
+    justify-content: center;
+  }
   .home_content{
-     grid-template-columns: 0.5fr 3fr;
+     grid-template-columns: .5fr 3fr;
      padding-top: 3.5rem;
+     
   }
   .home_img{
     order: initial;
