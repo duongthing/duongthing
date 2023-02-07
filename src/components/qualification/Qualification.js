@@ -14,17 +14,23 @@ const Qualification = () => {
 
             <div className='qualification_container container'>
                 <div className='qualification_tabs'>
-                    <div className={toggleState === 1 ? "qualification_button qualification_active button-flex" : "qualification_button button-flex"}>
+                    <div className={toggleState === 1 ?
+                        "qualification_button qualification_active button-flex" :
+                        "qualification_button button-flex"}
+                        onClick={() => toggleTab(1)}>
                         <i className='uil uil-graduation-cap qualification_icon'></i>{"  "}
                         Education
                     </div>
-                    <div className='qualification_button button-flex'>
+                    <div className={toggleState === 2 ?
+                        "qualification_button qualification_active button-flex" :
+                        "qualification_button button-flex"}
+                        onClick={() => toggleTab(2)}>
                         <i className='uil uil-briefcase-alt qualification_icon'></i>{"  "}
                         Experience
                     </div>
                 </div>
                 <div className='qualification_sections'>
-                    <div className='qualification_content qualification_content-active  '>
+                    <div className={toggleState === 1 ? 'qualification_content qualification_content-active  ' : 'qualification_content'}>
                         <div className='qualification_data'>
                             <div>
                                 <h3 className='qualification_title'>Web Design</h3>
@@ -88,7 +94,7 @@ const Qualification = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='qualification_content'>
+                    <div className={toggleState === 2 ? 'qualification_content qualification_content-active  ' : 'qualification_content'}>
                         <div className='qualification_data'>
                             <div>
                                 <h3 className='qualification_title'>Product Design</h3>
