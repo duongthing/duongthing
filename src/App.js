@@ -9,7 +9,10 @@ import Qualification from './components/qualification/Qualification';
 import Contact from './components/contact/Contact';
 function App() {
   return (
-    <div>
+    <div className='all'>
+      {/* <video >
+        <source src={video}></source>
+      </video> */}
       <Header />
       <main className='main'>
         <Home />
